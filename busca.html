@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encontre Seu Amigo Ideal!</title>
+
+  <style>
+    body {
+  margin: 0;
+  background-color: #fff2f2;
+}
+main {
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: lightpink;
+  color: antiquewhite;
+  padding: 10px;
+  border-bottom: double 4px palevioletred;
+  z-index: 1000;
+}
+.menu {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 25px;
+}
+.menu a {
+  text-decoration: none;
+  color: palevioletred;
+  background-color: antiquewhite;
+  text-align: center;
+  max-width: 95%;
+  max-height: 95%;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.titulo-busca {
+  font-family: cursive;
+  font-size: 70px;
+  color: palevioletred;
+  margin-left: 40px;
+  margin-bottom: 0%;
+}
+.formulario-de-busca {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.formulario-de-busca form {
+  background-color: #fcc8d9;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px #f0bacd;
+  width: 100%;
+  max-width: 1000px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.formulario-de-busca h2 {
+  color: #753422;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 22px;
+}
+.grade-formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.campo-busca {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 400px;
+}
+.formulario-de-busca label {
+  font-weight: bold;
+  color: #753422;
+  margin-bottom: 5px;
+}
+.formulario-de-busca * {
+  color: #753422;
+}
+.formulario-de-busca select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #753422;
+  border-radius: 6px;
+  background-color: #fff2f2;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+.campo-saude {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.opcoes-saude {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 8px;
+  background-color: #fff2f2;
+  padding: 15px;
+  border: 1px solid #753422;
+  border-radius: 6px;
+}
+.opcoes-saude label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.campo-sexo {
+  margin-bottom: 25px;
+}
+.opcoes-sexo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 8px;
+  background-color: #fff2f2;
+  padding: 15px;
+  border: 1px solid #753422;
+  border-radius: 6px;
+}
+.opcoes-sexo label {
+  font-weight: normal;
+  cursor: pointer;
+  margin: 0;
+}
+.formulario-de-busca button {
+  width: 100%;
+  padding: 16px;
+  background-color: #753422;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.formulario-de-busca button:hover {
+  background-color: palevioletred;
+  color: white;
+}
+
+
+
+
+
+
+footer {
+  background-color: lightpink;
+  padding: 10px;
+  border-top: double 4px palevioletred;
+  box-sizing: border-box;
+}
+.rodape{
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+}
+.item-rodape{
+  color: palevioletred;
+  background-color: antiquewhite;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 0;
+}
+.participantes{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.titulo-lista-rodape {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+.lista-rodape {
+  grid-row: span 3;
+  align-items: center;
+}
+.lista-rodape li{
+  font-size: 15px;
+  list-style-type: none;
+  text-align: center;
+}
+.final{
+  grid-column: span 2;
+}
+  </style>
+
+  
+</head>
+<body>
+  <header>
+  <nav class="menu">
+     <a href="index.html">Página Inicial</a>
+     <a href="adocao.html">Disponíveis para Adoção</a>
+     <a href="perfil.html">Perfil Pet</a>
+     <a href"adote.html">Adote Agora</a>
+     <a href="busca.html">Busca de Animais</a>
+     <a href="ajuda.html">Como nos Ajudar</a>
+  </nav>
+</header> 
+
+
+
+
+
+<main>
+
+  <br><br>
+
+  <h1 class="titulo-busca">Encontre o Amigo Ideal ᨐฅ</h1>
+
+  <div class="formulario-de-busca">
+    <form onsubmit="alert('Buscando animais com os filtros avançados selecionados...'); event.preventDefault();">
+      <h2>Refine sua busca para encontrar o pet perfeito:</h2>
+
+      <div class="grade-formulario">
+
+        <div class="campo-busca">
+          <label for="especie">Espécie:</label>
+          <select id="especie" name="especie">
+            <option value="cachorro">Cachorro</option>
+            <option value="gato">Gato</option>
+            <option value="aves">Aves</option>
+            <option value="roedores">Roedores</option>
+            <option value="tartarugas">Tartaturas</option>
+            <option value="coelhos">Coelhos</option>
+            <option value="porcos">Porcos</option>
+            <option value="outros">Outros</option>
+          </select>
+        </div>
+
+        <div class="campo-busca">
+          <label for="idade-pet">Idade do Pet:</label>
+          <select id="idade-pet" name="idade_pet">
+            <option value="">Qualquer idade</option>
+            <option value="filhote">Filhote</option>
+            <option value="adulto">Adulto</option>
+            <option value="idoso">Idoso</option>
+          </select>
+        </div>
+
+        <div class="campo-busca">
+          <label for="porte">Porte:</label>
+          <select id="porte" name="porte">
+            <option value="">Qualquer porte</option>
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+          </select>
+        </div>
+
+        <div class="campo-busca">
+          <label for="temperamento">Temperamento Principal:</label>
+          <select id="temperamento" name="temperamento">
+            <option value="">Qualquer temperamento</option>
+            <option value="calmo">Calmo e tranquilo</option>
+            <option value="brincalhao">Brincalhão e enérgico</option>
+            <option value="docil">Muito dócil / Carinhoso</option>
+            <option value="independente">Independente</option>
+            <option value="protetor">Protetor / Alerta</option>
+          </select>
+        </div>
+
+        <div class="campo-busca">
+          <label for="socializacao">Convive bem com:</label>
+          <select id="socializacao" name="socializacao">
+            <option value="">Sem restrições</option>
+            <option value="outros-caes">Outros cachorros</option>
+            <option value="gatos">Gatos</option>
+            <option value="criancas">Crianças</option>
+            <option value="apartamento">Ideal para apartamento</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="campo-saude">
+        <label>Preferências de Saúde:</label>
+        <div class="opcoes-saude">
+          <label><input type="checkbox" name="castrado" value="sim"> Já Castrado</label>
+          <label><input type="checkbox" name="vacinado" value="sim"> Vacinas em dia</label>
+          <label><input type="checkbox" name="especial" value="sim"> Pets com deficiência / Especiais</label>
+        </div>
+      </div>
+
+      <div class="campo-sexo">
+        <label>Sexo:</label>
+        <div class="opcoes-sexo">
+          <input type="radio" id="sexo-macho" name="sexo" value="macho">
+          <label for="sexo-macho">Macho</label>
+
+          <input type="radio" id="sexo-femea" name="sexo" value="femea">
+          <label for="sexo-femea">Fêmea</label>
+
+          <input type="radio" id="sexo-indiferente" name="sexo" value="" checked>
+          <label for="sexo-indiferente">Tanto faz</label>
+        </div>
+      </div>
+
+      <button type="submit">Buscar Meu Novo Amigo</button>
+    </form>
+  </div>
+
+</main>
+
+
+
+
+
+<footer>
+  <div class="rodape">
+
+    <p class="item-rodape participantes">
+      <strong>Participantes do Projeto</strong><br><br>
+      Alana Betina Cavalcante Sousa - Maria Clara Duarte da Silva<br>
+      Nicoly Ribeiro Magalhães - Rayssa Coêlho Dias - Rebeca Dos Santos Mota
+    </p>
+
+    <ul class="item-rodape lista-rodape"><h5 class="titulo-lista-rodape">Contatos</h5>
+      <li>Telefone - (89) 4002-8922</li>
+      <li>Instagram - @AdoptMe</li>
+      <li>Email - AdoptMe@gmail.com</li>
+    </ul>
+    <p class="item-rodape final">© 2026 – Projeto Educacional.</p>
+
+  </div>
+</footer>    
+
+  <script>
+    
+  </script>
+</body>
+</html>
