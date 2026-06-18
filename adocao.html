@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pets Disponíveis Para a Adoção!</title>
+
+  <style>
+    body {
+  margin: 0;
+  background-color: #fff2f2;
+}
+main {
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: lightpink;
+  color: antiquewhite;
+  padding: 10px;
+  border-bottom: double 4px palevioletred;
+  z-index: 1000;
+}
+.menu {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 25px;
+}
+.menu a {
+  text-decoration: none;
+  color: palevioletred;
+  background-color: antiquewhite;
+  text-align: center;
+  max-width: 95%;
+  max-height: 95%;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.titulo-adoções {
+  font-family: cursive;
+  font-size: 70px;
+  color: palevioletred;
+  margin-left: 40px;
+  margin-bottom: 0%;
+}
+.galeria-adocao{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+.pet-card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:.3s;
+}
+.pet-card:hover{
+  transform:translateY(-8px);
+}
+.pet-card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  transition:.4s;
+}
+.pet-card:hover img{
+  transform:scale(1.05);
+}
+.dados-pet{
+  padding:18px;
+  text-align:center;
+}
+.dados-pet h3{
+  color:palevioletred;
+  margin:0;
+  font-size:28px;
+}
+.dados-pet p{
+  color:#666;
+  margin:8px 0;
+}
+.personalidade{
+  font-style:italic;
+}
+.btn-adotar{
+  display:inline-block;
+  margin-top:12px;
+  padding:12px 22px;
+  background:palevioletred;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+  transition:.3s;
+}
+.galeria-adocao{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+  max-width:1300px;
+  margin:auto;
+  padding:20px;
+}
+.categoria-pets{
+  margin:50px 0;
+}
+.pet-card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.pet-card:hover{
+  transform:translateY(-8px);
+}
+.pet-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  transition:0.4s;
+}
+.pet-card:hover img{
+  transform:scale(1.05);
+}
+.dados-pet{
+  padding:18px;
+  text-align:center;
+}
+.dados-pet h3{
+  color:palevioletred;
+  margin:0;
+  font-size:28px;
+}
+.info{
+  color:#666;
+  margin:8px 0;
+}
+.personalidade{
+  background:#fff2f2;
+  border-radius:10px;
+  padding:10px;
+  color:#8B6BB4;
+  font-style:italic;
+}
+.btn-adotar{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 25px;
+  background:palevioletred;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+}
+.btn-adotar:hover{
+  background:#d85d89;
+}
+.btn-adotar:hover{
+  background:#d95a87;
+}
+
+
+
+
+
+
+footer {
+  background-color: lightpink;
+  padding: 10px;
+  border-top: double 4px palevioletred;
+  box-sizing: border-box;
+}
+.rodape{
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+}
+.item-rodape{
+  color: palevioletred;
+  background-color: antiquewhite;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 0;
+}
+.participantes{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.titulo-lista-rodape {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+.lista-rodape {
+  grid-row: span 3;
+  align-items: center;
+}
+.lista-rodape li{
+  font-size: 15px;
+  list-style-type: none;
+  text-align: center;
+}
+.final{
+  grid-column: span 2;
+}
+  </style>
+
+  
+</head>
+<body>
+  <header>
+  <nav class="menu">
+     <a href="index.html">Página Inicial</a>
+     <a href="adocao.html">Disponíveis para Adoção</a>
+     <a href="perfil.html">Perfil Pet</a>
+     <a href="adote.html">Adote Agora</a>
+     <a href="busca.html">Busca de Animais</a>
+     <a href="ajuda.html">Como nos Ajudar</a>
+  </nav>
+</header>
+
+
+
+
+
+<main>
+  
+  <br><br><br>
+
+  <h1 class="titulo-adoções">Pets Disponíveis para Adoção 🐾</h1>
+
+  <div class="categoria-pets">
+
+    <div class="galeria-adocao">
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/1200x/03/3e/9b/033e9b8ed26f99093ec50d1595817198.jpg">
+
+        <div class="dados-pet">
+          <h3>Thorr</h3>
+          <p class="info">3 anos • Macho • Porte Médio</p>
+          <p class="personalidade">Alegre e cheio de energia.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/736x/91/de/a1/91dea14bc44986a0b65849eb9e7e3c05.jpg">
+
+        <div class="dados-pet">
+          <h3>Ricardin</h3>
+          <p class="info">2 anos • Macho • Porte Médio</p>
+          <p class="personalidade">Calmo e companheiro.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/736x/bb/7c/1a/bb7c1ac6f4fc80cc374b213b3d98c61d.jpg">
+
+        <div class="dados-pet">
+          <h3>Thor</h3>
+          <p class="info">3 meses • Macho • Porte Pequeno</p>
+          <p class="personalidade">Calmo e carinhoso.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/736x/ac/26/e8/ac26e8f28646930d3a829ef25bc5bf1f.jpg">
+
+        <div class="dados-pet">
+          <h3>Tirulipa</h3>
+          <p class="info">4 meses • Macho • Porte Médio</p>
+          <p class="personalidade">Sempre alegre.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/736x/7c/d0/5b/7cd05b36ea5e804e5c1d74f59ffc7de1.jpg">
+
+        <div class="dados-pet">
+          <h3>Pedro</h3>
+          <p class="info">5 anos • Macho • Porte Pequeno</p>
+          <p class="personalidade">Agitado e divertido.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+     </div>
+
+    </div>
+  </div>
+
+  <div class="categoria-pets">
+
+    <div class="galeria-adocao">
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/1200x/a7/d9/db/a7d9db0d346045fcb15a9553f5be0279.jpg">
+
+        <div class="dados-pet">
+          <h3>Lucas, Max, Mingau e Juju</h3>
+          <p class="info">4 meses • Porte Pequeno</p>
+          <p class="personalidade">Tranquilos e fofinhos.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/736x/4b/46/70/4b467089ef32a756a949b95e04ea68cc.jpg">
+
+        <div class="dados-pet">
+          <h3>Destruidor</h3>
+          <p class="info">8 meses • Macho • Porte Pequeno</p>
+          <p class="personalidade">Atentado 😼</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/736x/2e/0d/83/2e0d83a0203ce987bdb79e14bc1e3190.jpg">
+
+        <div class="dados-pet">
+          <h3>Blue</h3>
+          <p class="info">9 meses • Macho • Porte Pequeno</p>
+          <p class="personalidade">Gosta de irritar os outros 😹</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/1200x/88/e9/1f/88e91fd4dde30e0f56c150460272ff14.jpg">
+
+        <div class="dados-pet">
+          <h3>Zezé de Camargo</h3>
+          <p class="info">1 ano • Macho • Porte Pequeno</p>
+          <p class="personalidade">Meio irritado, mas adorável.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/736x/97/94/71/979471fb7edb9ab405a257fe79d571d3.jpg">
+
+        <div class="dados-pet">
+          <h3>Ana Cecília</h3>
+          <p class="info">7 meses • Fêmea • Porte Pequeno</p>
+          <p class="personalidade">Muito calma.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="categoria-pets">
+
+    <div class="galeria-adocao">
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/736x/66/b1/2e/66b12e8860fec3d97fc36b2760085366.jpg">
+
+        <div class="dados-pet">
+          <h3>Perna Longa</h3>
+          <p class="info">1 ano • Macho • Porte Pequeno</p>
+          <p class="personalidade">Muito simpático.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/1200x/cb/e6/eb/cbe6eb8b55e33a331cb0ab1c9ca22f05.jpg">
+
+        <div class="dados-pet">
+          <h3>Tico e Teco</h3>
+          <p class="info">3 meses • Pequeno</p>
+          <p class="personalidade">De boas com a vida.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://i.pinimg.com/1200x/79/b0/33/79b033ff85a689fee2c92b3c0989e68e.jpg">
+        <div class="dados-pet">
+          <h3>Princesa e Gi</h3>
+          <p class="info">5 e 8 meses • Fêmeas</p>
+          <p class="personalidade">Tranquilas e carinhosas.</p>
+          <a href="#formulário-de-adoção" class="btn-adotar">Quero Adotar 💖</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br><br><br>
+
+</main>
+
+
+
+
+
+
+<footer>
+  <div class="rodape">
+
+    <p class="item-rodape participantes">
+      <strong>Participantes do Projeto</strong><br><br>
+      Alana Betina Cavalcante Sousa - Maria Clara Duarte da Silva<br>
+      Nicoly Ribeiro Magalhães - Rayssa Coêlho Dias - Rebeca Dos Santos Mota
+    </p>
+
+    <ul class="item-rodape lista-rodape"><h5 class="titulo-lista-rodape">Contatos</h5>
+      <li>Telefone - (89) 4002-8922</li>
+      <li>Instagram - @AdoptMe</li>
+      <li>Email - AdoptMe@gmail.com</li>
+    </ul>
+    <p class="item-rodape final">© 2026 – Projeto Educacional.</p>
+
+  </div>
+</footer>    
+
+  <script>
+    
+  </script>
+</body>
+</html>
