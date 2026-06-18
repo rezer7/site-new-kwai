@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adote Agora um Amigo!</title>
+
+  <style>
+    body {
+  margin: 0;
+  background-color: #fff2f2;
+}
+main {
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: lightpink;
+  color: antiquewhite;
+  padding: 10px;
+  border-bottom: double 4px palevioletred;
+  z-index: 1000;
+}
+.menu {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 25px;
+}
+.menu a {
+  text-decoration: none;
+  color: palevioletred;
+  background-color: antiquewhite;
+  text-align: center;
+  max-width: 95%;
+  max-height: 95%;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.titulo-adoção {
+  font-family: cursive;
+  font-size: 80px;
+  color: palevioletred;
+  margin-left: 40px;
+  margin-bottom: 0%;
+}
+.formulário-de-adoção {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.formulário-de-adoção form {
+  background-color: #fcc8d9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px #f0bacd;
+  width: 100%;
+  max-width: 1000px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.formulário-de-adoção h2 {
+  color: #753422;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.formulário-de-adoção label {
+  font-weight: bold;
+  color: #753422;
+}
+.formulário-de-adoção * {
+  box-sizing: border-box;
+  color: #753422;
+}
+.formulário-de-adoção button {
+  width: 100%;
+  padding: 15px;
+  background-color: #753422;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: background-color 0.3s;
+}
+.formulário-de-adoção input[type="text"],
+.formulário-de-adoção input[type="email"],
+.formulário-de-adoção input[type="number"],
+.formulário-de-adoção select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #753422;
+}
+.formulário-de-adoção p {
+  text-align: justify;
+  background-color: #fff2f2;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+
+
+
+
+footer {
+  background-color: lightpink;
+  padding: 10px;
+  border-top: double 4px palevioletred;
+  box-sizing: border-box;
+}
+.rodape{
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+}
+.item-rodape{
+  color: palevioletred;
+  background-color: antiquewhite;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 0;
+}
+.participantes{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.titulo-lista-rodape {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+.lista-rodape {
+  grid-row: span 3;
+  align-items: center;
+}
+.lista-rodape li{
+  font-size: 15px;
+  list-style-type: none;
+  text-align: center;
+}
+.final{
+  grid-column: span 2;
+}
+  </style>
+
+  
+</head>
+<body>
+  <header>
+  <nav class="menu">
+     <a href="index.html">Página Inicial</a>
+     <a href="adocao.html">Disponíveis para Adoção</a>
+     <a href="perfil.html">Perfil Pet</a>
+     <a href="adote.html">Adote Agora</a>
+     <a href="busca.html">Busca de Animais</a>
+     <a href="ajuda.html">Como nos Ajudar</a>
+  </nav>
+</header> 
+
+
+
+
+
+<main>
+
+<br><br><br>
+
+  <h1 class="titulo-adoção">Adote Agora!</h1>
+
+  <div class="formulário-de-adoção">
+    <form onsubmit="alert('Seus dados foram enviados para o anunciante'); event.preventDefault();">
+      <h2>Preencha o formulário abaixo para adotar:</h2>
+
+
+      <label for="nome">Nome Completo:</label><br>
+      <input type="text" id="nome" name="nome" placeholder="Ex: Maria da Silva" required>
+      <br><br>
+
+      <label for="idade">Idade (mínimo 18 anos):</label>
+      <br>
+      <input type="number" id="idade" name="idade" min="18" required>
+      <br><br>
+
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email_aluno" name="email" placeholder="samuel.silva@gmail.com" required>
+      <br><br>
+ 
+      <label for="cidade">Escolha a Região e a Cidade:</label>
+      <select id="cidade" name="cidade" required>
+       <option value="">Selecione uma cidade...</option>
+
+       <optgroup label="Piauí">
+        <option value="teresina">Teresina</option>
+        <option value="sao-raimundo">São Raimundo Nonato</option>
+        <option value="sao-joao">São João do Piauí</option>
+       </optgroup>
+      </select>
+
+  <br><br>
+
+      <label for="rua">Rua / Logradouro:</label>
+      <input type="text" id="rua" name="rua" required placeholder="Ex: Av. Central">
+      <br><br>
+      <label for="bairro">Bairro:</label>
+      <input type="text" id="bairro" name="bairro" required placeholder="Ex: Centro">
+      <br><br>
+      <label for="complemento">Complemento (Opcional):</label>
+      <input type="text" id="complemento" name="complemento" placeholder="Ex: Apt 102, Bloco B">
+      <br><br>
+
+
+      <label for="numero">Número para contato:</label>
+      <input type="number" id="numero" name="numero"  placeholder="ex: (11) 99999-9999" >
+      <br><br>
+
+
+    <p>Você tem ciência de todos os custos que cães e gatos geram ao longo de sua vida, 
+       com alimentação, despesas veterinárias, limpeza, entre outros e afirma ter plenas 
+       condições de arcar com tais custos, além de entender que adotar um animal é uma 
+       decisão que não deve ser tomada por impulso e esse compromisso é pelo resto da vida dele?
+    </p>
+
+
+    <input type="radio" id="ciente-sim" name="ciencia_custos" value="sim" required>
+    <label for="ciente-sim">SIM</label>
+
+    <input type="radio" id="ciente-no" name="ciencia_custos" value="nao" required>
+    <label for="ciente-no">NÃO</label>
+    <br><br>
+
+    <button type="submit">Finalizar Inscrição</button>
+    </form>
+  </div>
+
+</main>
+
+
+
+
+
+
+<footer>
+  <div class="rodape">
+
+    <p class="item-rodape participantes">
+      <strong>Participantes do Projeto</strong><br><br>
+      Alana Betina Cavalcante Sousa - Maria Clara Duarte da Silva<br>
+      Nicoly Ribeiro Magalhães - Rayssa Coêlho Dias - Rebeca Dos Santos Mota
+    </p>
+
+    <ul class="item-rodape lista-rodape"><h5 class="titulo-lista-rodape">Contatos</h5>
+      <li>Telefone - (89) 4002-8922</li>
+      <li>Instagram - @AdoptMe</li>
+      <li>Email - AdoptMe@gmail.com</li>
+    </ul>
+    <p class="item-rodape final">© 2026 – Projeto Educacional.</p>
+
+  </div>
+</footer>        
+
+  <script>
+    
+  </script>
+</body>
+</html>
