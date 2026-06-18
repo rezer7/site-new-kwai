@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Como Ajudar Nós Ajudar?</title>
+
+  <style>
+    body {
+  margin: 0;
+  background-color: #fff2f2;
+}
+main {
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: lightpink;
+  color: antiquewhite;
+  padding: 10px;
+  border-bottom: double 4px palevioletred;
+  z-index: 1000;
+}
+.menu {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 25px;
+}
+.menu a {
+  text-decoration: none;
+  color: palevioletred;
+  background-color: antiquewhite;
+  text-align: center;
+  max-width: 95%;
+  max-height: 95%;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+#ajuda-contribuição{
+  padding: 50px 20px;
+}
+.titulo-ajuda{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.titulo-ajuda h2{
+  color: palevioletred;
+  font-size: 55px;
+  font-family: cursive;
+  margin-bottom: 10px;
+}
+.titulo-ajuda p{
+  color: #753422;
+  font-size: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.card-ajuda-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+.card-ajuda{
+  background-color: antiquewhite;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: .3s;
+}
+.maior {
+  grid-column: span 3;
+}
+.card-ajuda:hover{
+  transform: translateY(-8px);
+}
+.card-ajuda h3{
+  color: palevioletred;
+  margin-bottom: 10px;
+}
+.card-ajuda p{
+  color: #753422;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.botao-ajuda{
+  display: inline-block;
+  text-decoration: none;
+  background-color: palevioletred;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: .3s;
+}
+.botao-ajuda:hover{
+  background-color: #d95a87;
+}
+.voluntario-conteudo{
+  text-align: center;
+  margin-top: 30px;
+}
+.voluntario-conteudo h2{
+  color: palevioletred;
+  font-family: cursive;
+  font-size: 45px;
+}
+.voluntario-conteudo p{
+  color: #753422;
+  font-size: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+.botao-voluntario{
+  display: inline-block;
+  text-decoration: none;
+  background-color: palevioletred;
+  color: antiquewhite;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: .3s;
+}
+.botao-voluntario:hover{
+  background-color: #8ddde8;
+}
+
+
+
+
+
+
+
+footer {
+  background-color: lightpink;
+  padding: 10px;
+  border-top: double 4px palevioletred;
+  box-sizing: border-box;
+}
+.rodape{
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+}
+.item-rodape{
+  color: palevioletred;
+  background-color: antiquewhite;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 0;
+}
+.participantes{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.titulo-lista-rodape {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+.lista-rodape {
+  grid-row: span 3;
+  align-items: center;
+}
+.lista-rodape li{
+  font-size: 15px;
+  list-style-type: none;
+  text-align: center;
+}
+.final{
+  grid-column: span 2;
+}
+  </style>
+
+  
+</head>
+<body>
+  <header>
+  <nav class="menu">
+     <a href="index.html">Página Inicial</a>
+     <a href="adocao.html">Disponíveis para Adoção</a>
+     <a href="perfil.html">Perfil Pet</a>
+     <a href="adote.html">Adote Agora</a>
+     <a href="busca.html">Busca de Animais</a>
+     <a href="ajuda.html">Como nos Ajudar</a>
+  </nav>
+</header> 
+
+
+
+
+
+<main>
+
+ <br><br><br>
+
+  <div class="titulo-ajuda">
+    <h2>Como Você Pode Ajudar</h2>
+    <p>
+      Existem diversas maneiras de contribuir com a proteção e o bem-estar
+      dos animais resgatados. Toda ajuda faz diferença.
+    </p>
+  </div>
+
+
+  <div class="card-ajuda-container">
+
+    <div class="card-ajuda">
+      <h3>Doação de Ração</h3>
+      <p>
+        Contribua com rações, sachês e suplementos para cães e gatos resgatados.
+      </p>
+      <a href="#" class="botao-ajuda">Ver Pontos de Coleta</a>
+    </div>
+
+    <div class="card-ajuda">
+      <h3>Medicamentos</h3>
+      <p>
+        Ajude com medicamentos e produtos veterinários.
+      </p>
+      <a href="#" class="botao-ajuda">Saiba Mais</a>
+    </div>
+
+    <div class="card-ajuda">
+      <h3>Doação Financeira</h3>
+      <p>
+        As contribuições ajudam nos custos com alimentação e tratamentos.
+      </p>
+      <a href="#" class="botao-ajuda">Fazer Doação</a>
+    </div>
+
+    <div class="card-ajuda maior">
+      <h3>Ponto de Coleta</h3>
+      <p>
+        Entregue rações, medicamentos e outros itens em nosso local de arrecadação.
+      </p>
+      <a href="#" class="botao-ajuda">Ver Localização</a>
+    </div>
+
+  </div>
+
+
+  <div class="voluntario-conteudo">
+    <h2>Seja um Voluntário e Transforme Vidas</h2>
+    <p>
+      Pequenas atitudes fazem grandes diferenças.
+      Ajude em campanhas, eventos e nos cuidados com os animais resgatados.
+    </p>
+
+    <a href="#" class="botao-voluntario">
+      Quero Participar
+    </a>
+  </div>
+
+</main>
+
+
+
+
+
+
+<footer>
+  <div class="rodape">
+
+    <p class="item-rodape participantes">
+      <strong>Participantes do Projeto</strong><br><br>
+      Alana Betina Cavalcante Sousa - Maria Clara Duarte da Silva<br>
+      Nicoly Ribeiro Magalhães - Rayssa Coêlho Dias - Rebeca Dos Santos Mota
+    </p>
+
+    <ul class="item-rodape lista-rodape"><h5 class="titulo-lista-rodape">Contatos</h5>
+      <li>(89) 4002-8922</li>
+      <li>@AdoptMe</li>
+      <li>AdoptMe@gmail.com</li>
+    </ul>
+    <p class="item-rodape final">© 2026 – Projeto Educacional.</p>
+
+  </div>
+</footer>     
+
+  <script>
+    
+  </script>
+</body>
+</html>

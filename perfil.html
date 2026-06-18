@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil Pet!</title>
+
+  <style>
+    body {
+  margin: 0;
+  background-color: #fff2f2;
+}
+main {
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: lightpink;
+  color: antiquewhite;
+  padding: 10px;
+  border-bottom: double 4px palevioletred;
+  z-index: 1000;
+}
+.menu {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 25px;
+}
+.menu a {
+  text-decoration: none;
+  color: palevioletred;
+  background-color: antiquewhite;
+  text-align: center;
+  max-width: 95%;
+  max-height: 95%;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.titulo-perfil {
+  font-family: cursive;
+  font-size: 110px;
+  color: palevioletred;
+  margin-left: 40px;
+  margin-bottom: 0%;
+}
+#cartao-perfil {
+  background-color: pink;
+  padding: 35px;         
+  border-radius: 40px;      
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #753422;
+  box-sizing: border-box;
+  margin: 40px auto;
+  display: block;
+  width: 95%;                 
+}
+#cartao-perfil h1 {
+  font-family: cursive;
+  color: palevioletred;
+  font-size: 30px;
+  margin: 0 0 10px 0;
+}
+#cartao-perfil h2 {
+  font-size: 30px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+#cartao-perfil p {
+  font-size: 23px;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0;
+}
+#foto-pet {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: ridge 5px palevioletred;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+.tags-temperamento {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tags-temperamento li {
+  background-color: palevioletred;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+#tabela-vacinas {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0 25px 0;
+  background-color: #fff2f2;
+}
+#tabela-vacinas th, 
+#tabela-vacinas td {
+  border: 1px solid #753422;
+  padding: 8px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+#tabela-vacinas th {
+  background-color: palevioletred;
+  color: whitesmoke;
+}
+#botao-carinho {
+  display: inline-block;
+  background-color: palevioletred;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+#botao-carinho:hover {
+  background-color: #ff69b4;
+  transform: scale(1.05);
+}
+#botao-carinho:active { 
+  transform: scale(0.95); 
+} 
+#contador-carinho { 
+  text-align: center; 
+  font-weight: bold; 
+  margin-top: 15px; 
+  color: #ff69b4; 
+  font-size: 18px; 
+  font-family: Arial, sans-serif; 
+  transition: font-size 0.2s; 
+} 
+#botao-carinho:focus ~ #contador-carinho { 
+  font-size: 0px;  
+} 
+#botao-carinho:focus ~ #contador-carinho::after { 
+  content: "Carinhos recebidos: 1 ❤️"; 
+  font-size: 18px;  
+}
+#botao-carinho:focus {
+  outline: none;
+}
+
+
+
+
+
+
+footer {
+  background-color: lightpink;
+  padding: 10px;
+  border-top: double 4px palevioletred;
+  box-sizing: border-box;
+}
+.rodape{
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+}
+.item-rodape{
+  color: palevioletred;
+  background-color: antiquewhite;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 0;
+}
+.participantes{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.titulo-lista-rodape {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+.lista-rodape {
+  grid-row: span 3;
+  align-items: center;
+}
+.lista-rodape li{
+  font-size: 15px;
+  list-style-type: none;
+  text-align: center;
+}
+.final{
+  grid-column: span 2;
+}
+  </style>
+
+  
+</head>
+<body>
+  <header>
+  <nav class="menu">
+     <a href="index.html">Página Inicial</a>
+     <a href="adocao.html">Disponíveis para Adoção</a>
+     <a href="perfil.html">Perfil Pet</a>
+     <a href="adote.html">Adote Agora</a>
+     <a href="busca.html">Busca de Animais</a>
+     <a href="ajuda.html">Como nos Ajudar</a>
+  </nav>
+</header> 
+
+
+
+
+
+<main>
+
+<br><br>
+
+  <h1 class="titulo-perfil">Perfil Pet!</h1>
+
+  <div id="cartao-perfil">
+    <h2>Rex</h2>
+    <img src="https://preview.redd.it/tips-on-how-to-properly-care-for-a-siamese-cat-v0-xw2srmf601xe1.jpg?width=640&crop=smart&auto=webp&s=8b84fb2d51c6773b43e29b45bbdeae7a490c4659" alt="Foto do Rex" id="foto-pet">
+  
+    <h2>Sobre a minha história</h2>
+    <p>Encontrado no centro com a cabeça presa no portão de uma casa, resgatado e levado diretamente para um veterinário, de onde foi encaminhado para a Adopt Me.</p>
+  
+    <h2>Temperamento</h2>
+      <ul class="tags-temperamento">
+       <li>Um pouco arisco</li>
+       <li>Dorminhoco</li>
+       <li>Dengoso</li>
+       <li>Calmo</li>
+      </ul>
+
+    <h2>Histórico de Vacinas</h2>
+     <table id=tabela-vacinas>
+      <tr>
+        <th>Vacina</th>
+        <th>Data da Dose</th>
+      </tr>
+      <tr>
+        <td>Quádrupla Felina (V4)  1° Dose</td>
+        <td>13/07/2026</td>
+      </tr>
+      <tr>
+        <td>Quádrupla Felina (V4) 2° Dose</td>
+        <td>10/08/2026</td>
+      </tr>
+      <tr>
+        <td>Antirrábica Felina</td>
+        <td>10/08/2026</td>
+      </tr>
+     </table>
+  
+    <button id="botao-carinho">Fazer carinho ❤️</button>
+      <p id="contador-carinho">Carinhos recebidos: 0</p>
+  </div> 
+
+</main>
+
+
+
+
+
+<footer>
+  <div class="rodape">
+
+    <p class="item-rodape participantes">
+      <strong>Participantes do Projeto</strong><br><br>
+      Alana Betina Cavalcante Sousa - Maria Clara Duarte da Silva<br>
+      Nicoly Ribeiro Magalhães - Rayssa Coêlho Dias - Rebeca Dos Santos Mota
+    </p>
+
+    <ul class="item-rodape lista-rodape"><h5 class="titulo-lista-rodape">Contatos</h5>
+      <li>Telefone - (89) 4002-8922</li>
+      <li>Instagram - @AdoptMe</li>
+      <li>Email - AdoptMe@gmail.com</li>
+    </ul>
+    <p class="item-rodape final">© 2026 – Projeto Educacional.</p>
+
+  </div>
+</footer>    
+
+  <script>
+    
+  </script>
+</body>
+</html>
